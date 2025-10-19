@@ -1,17 +1,17 @@
 {
   "name": "vitest-pool-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Ari Perkkiö <ari.perkkio@gmail.com>",
   "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.js"
     },
     "./worker": {
-      "types": "./dist/worker/index.d.ts",
-      "import": "./dist/worker/index.mjs"
+      "types": "./dist/worker.d.ts",
+      "import": "./dist/worker.js"
     }
   },
   "files": [
