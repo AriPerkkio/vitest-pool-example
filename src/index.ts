@@ -1,11 +1,11 @@
-import type { PoolRuntimeInitializer } from "vitest/node";
-import { CustomOptions, CustomPoolRuntime } from "./pool-runtime";
+import type { PoolRunnerInitializer } from "vitest/node";
+import { CustomOptions, CustomPoolWorker } from "./pool-worker";
 
 export function customPool(
   customOptions: CustomOptions,
-): PoolRuntimeInitializer {
+): PoolRunnerInitializer {
   return {
-    runtime: "custom-pool",
-    create: (options) => new CustomPoolRuntime(options, customOptions),
+    name: "custom-pool",
+    createPoolWorker: (options) => new CustomPoolWorker(options, customOptions),
   };
 }

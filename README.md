@@ -2,7 +2,7 @@
 
 [![Version][version-badge]][npm-url]
 
-> Reference implementation of a custom Vitest pool runtime.
+> Reference implementation of a custom Vitest pool worker.
 
 ## Installation
 
