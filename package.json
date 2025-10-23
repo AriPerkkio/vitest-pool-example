@@ -27,7 +27,8 @@
   "scripts": {
     "dev": "tsdown --watch --sourcemap",
     "build": "tsdown",
-    "test": "vitest"
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/node": "^24.8.1",

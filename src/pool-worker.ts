@@ -10,7 +10,7 @@ export class CustomPoolWorker implements PoolWorker {
   name = "custom-pool";
   private thread?: Worker;
   readonly execArgv: string[];
-  readonly env: Record<string, string>;
+  readonly env: Partial<NodeJS.ProcessEnv>;
   private customOptions: CustomOptions;
 
   constructor(options: PoolOptions, customOptions: CustomOptions) {
