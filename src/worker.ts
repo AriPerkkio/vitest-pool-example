@@ -1,4 +1,4 @@
-import { init, runBaseTests } from "vitest/worker";
+import { init, runBaseTests, setupEnvironment } from "vitest/worker";
 import { parentPort } from "node:worker_threads";
 
 (globalThis as any).CUSTOM_POOL_RUNNING = true;
@@ -14,6 +14,7 @@ init({
   on: (rpcListener) => port.on("message", rpcListener),
   off: (callback) => port.off("message", callback),
   teardown: () => port.removeAllListeners(),
-  runTests: (state) => runBaseTests("run", state),
-  collectTests: (state) => runBaseTests("collect", state),
+  runTests: (state, traces) => runBaseTests("run", state, traces),
+  collectTests: (state, traces) => runBaseTests("collect", state, traces),
+  setup: setupEnvironment,
 });
