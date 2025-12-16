@@ -1,6 +1,6 @@
 {
   "name": "vitest-pool-example",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Ari Perkkiö <ari.perkkio@gmail.com>",
   "license": "MIT",
   "type": "module",
